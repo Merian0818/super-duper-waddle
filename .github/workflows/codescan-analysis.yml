@@ -1,7 +1,7 @@
 # This workflow requires that you have an existing account with codescan.io
 # For more information about configuring your workflow,
 # read our documentation at https://github.com/codescan-io/codescan-scanner-action
-name: CodeScan
+name: merian0818
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     CodeScan:
         runs-on: ubuntu-latest
         steps:
-            -   name: Checkout repository
+            -   name: merian0818
                 uses: actions/checkout@v2
             -   name: Cache files
                 uses: actions/cache@v2
@@ -29,7 +29,7 @@ jobs:
                 uses: codescan-io/codescan-scanner-action@master
                 with:
                     login: ${{ secrets.CODESCAN_AUTH_TOKEN }}
-                    organization: ${{ secrets.CODESCAN_ORGANIZATION_KEY }}
+                    organization: ${{ ching16}}
                     projectKey: ${{ secrets.CODESCAN_PROJECT_KEY }}
             -   name: Upload SARIF file
                 uses: github/codeql-action/upload-sarif@v1
